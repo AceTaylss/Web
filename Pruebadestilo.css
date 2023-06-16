@@ -1,0 +1,163 @@
+/* Estilo para el contenedor principal */
+.slideshow-container {
+    position: relative;
+    width: 50%;
+    margin: auto;
+  }
+
+  /* Estilo para las imágenes */
+  .mySlides {
+    display: none;
+  }
+
+  /* Estilo para las flechas */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Estilo para la flecha de la izquierda */
+  .prev {
+    left: 0;
+  }
+
+  /* Estilo para la flecha de la derecha */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* Estilo para los puntos */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+  }
+
+  /* Estilo para los puntos activos */
+  .active {
+    background-color: #717171;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 36px;
+  }
+  
+  nav {
+    background-color: #eeeeee;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    padding: 5px 10px;
+  }
+  
+  section {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .service {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .service h3 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  
+  .service p {
+    margin-bottom: 0;
+  }
+  
+  .contact-button {
+    display: inline-block;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  
+  .contact-button:hover {
+    background-color: #555555;
+  }
+
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .contact-icons img {
+    width: 40px;
+    margin: 0 10px;
+  }
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  
