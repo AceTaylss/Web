@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portada del Sitio Web</title>
+  <style>
+    /* Estilos para el contenedor principal */
+    #portada {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* Utiliza toda la altura visible del viewport */
+      overflow: hidden;
+      display: flex; /* Agrega display flex para colocar el contenido a la derecha */
+    }
+
+    /* Estilos para las diapositivas */
+    .diapositiva {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 400px;
+      height: 400px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: center; /* Centra el texto horizontalmente */
+    }
+
+    /* Estilo para mostrar una diapositiva activa */
+    .diapositiva.activa {
+      opacity: 1;
+    }
+
+    /* Estilos para los puntos de navegación */
+    .navegacion {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .punto {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .punto.activo {
+      background-color: #000000;
+    }
+
+    /* Estilos para el botón de más información */
+    .boton-info {
+      margin-top: 20px; /* Agrega espacio entre el título y el botón */
+      background-color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #000000;
+    }
+
+    /* Estilos para el contenido a la derecha */
+    .contenido-derecha {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+  </style>
+  <script>
+    var diapositivas;
+    var puntos;
+    var indiceActual = 0;
+
+    // Función para cambiar la diapositiva actual
+    function cambiarDiapositiva(indice) {
+      diapositivas[indiceActual].classList.remove("activa");
+      puntos[indiceActual].classList.remove("activo");
+      diapositivas[indice].classList.add("activa");
+      puntos[indice].classList.add("activo");
+      indiceActual = indice;
+    }
+
+    // Función para alternar las diapositivas automáticamente
+    function alternarDiapositivas() {
+      setInterval(function() {
+        var siguiente = (indiceActual + 1) % diapositivas.length;
+        cambiarDiapositiva(siguiente);
+      }, 10000); // Cambiar de diapositiva cada 10 segundos (10000 ms)
+    }
+  </script>
+</head>
+<body onload="alternarDiapositivas()">
+  <div id="portada">
+    <div class="diapositiva activa" style="background-image: url('ace.jpeg');">
+      <h1>AceTayl</h1>
+      <a href="mas-informacion.html" class="boton-info">Mi perfil</a>
+    </div>
+    <div class="diapositiva" style="background-image: url('fox.jpeg');">
+      <h1>AceTayl</h1>
+      <a href="mas-informacion.html" class="boton-info">Mi perfil</a>
+    </div>
+    <div class="diapositiva" style="background-image: url('zorry.png');">
+      <h1>AceTayl</h1>
+      <a href="mas-informacion.html" class="boton-info">Mi perfil</a>
+    </div>
+    <!-- Agrega más diapositivas si lo deseas -->
+
+      <div class="puntos">
+        <span class="punto activo" onclick="cambiarDiapositiva(0)"></span>
+        <span class="punto" onclick="cambiarDiapositiva(1)"></span>
+        <span class="punto" onclick="cambiarDiapositiva(2)"></span>
+        <!-- Agrega más puntos si lo deseas -->
+      </div>
+
+    <div class="float: left">
+      <!-- Agrega tu contenido adicional aquí -->
+      <h2>..............................................................AceTayl</h2>
+      <p><h3><p>...............................................................................Soy un apasionado de desarrolador front-end, y back-end, ademas de programador de IA, videojuegos y sistemas con</p></h3> 
+      <h3><p>...............................................................................un amor por la musica y los videojuegos. Me impulsa el deseo de crear y dar vida a mis ideas a traves de la </p></h3>
+      <h3><p>...............................................................................programacion.</p></h3>
+      <h3><p>...............................................................................Cuando no estoy programando realizo actividades varias que van desde estudiar hasta jugar videojuegos.</p></h3>
+      <h3><p>...............................................................................Disfruto encontrando solucion a los problemas y ver como mi trabajo tieneu impacto positivo en los demas.</p></h3><br><br><br><br>
+    </div>
+  </div>
+
+  <script>
+    diapositivas = Array.from(document.getElementsByClassName("diapositiva"));
+    puntos = Array.from(document.getElementsByClassName("punto"));
+  </script>
+</body>
+</html>
