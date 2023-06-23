@@ -1,0 +1,229 @@
+header {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(27, 25, 25, 0.966); /* Fondo oscuro con transparencia */
+  padding: 5px;
+  border-radius: 10px; /* Bordes redondeados */
+  text-align: center;
+  width: 80%; /* Ajusta el ancho de la barra superior */
+  max-width: 550px; /* Ajusta la longitud máxima de la barra superior */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: rgb(41, 26, 41);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 3px 8px;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(to top, #320447 0%, #6503a7 100%);
+  margin: 0;
+  padding: 0;
+}
+barrita
+header {
+  background-color: #261f2bee;
+  color: #1f1e1e;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+div {
+  color: #1e1024;
+}
+img{
+  border: 1px solid #992727;
+  border-radius: 1em;
+}
+nav {
+  
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #52108ba4;
+  padding: 5px 10px;
+}
+
+section {
+  padding: 50px;
+  text-align: center;
+}
+
+footer {
+  background-color: #2f103a;
+  color: #122da7;
+  padding: 20px;
+  text-align: center;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #992727;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.service h3 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.service p {
+  margin-bottom: 0;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #494141;
+  color: #acacac;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.contact-button:hover {
+  background-color: #181414;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.contact-icons img {
+  width: 40px;
+  margin: 0 10px;
+}
+button{
+  color: #e62e2e;
+}
+
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+  
+#portada {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Utiliza toda la altura visible del viewport */
+    overflow: hidden;
+    display: flex; /* Agrega display flex para colocar el contenido a la derecha */
+  }
+text {
+flex: 1;
+}
+  /* Estilos para las diapositivas */
+  .diapositiva {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 390px;
+    height: 390px;
+    opacity: 0;
+    transition:  0.5s ease;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center; /* Centra el texto horizontalmente */
+  }
+
+  /* Estilo para mostrar una diapositiva activa */
+  .diapositiva.activa {
+    opacity: 1;
+  }
+
+  /* Estilos para los puntos de navegación */
+  .navegacion {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .punto {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .punto.activo {
+    background-color: #000000;
+  }
+
+  /* Estilos para el botón de más información */
+  .boton-info {
+    margin-top: 20px; /* Agrega espacio entre el título y el botón */
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  /* Estilos para el contenido a la derecha */
+  .contenido-derecha {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
